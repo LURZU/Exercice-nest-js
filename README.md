@@ -2,6 +2,11 @@
 ## MOSTI Tom B3DEV
 # Setup
 
+## Créer un .env avec les identifiants suivant (Remplacer les ... par vos identifiants) : 
+DATABASE_USER=...
+DATABASE_PASSWORD=...
+DATABASE_HOST=...
+
 ## Nest JS installation
 
 `npm i -g @nestjs/cli`
@@ -10,10 +15,6 @@
 
 `yarn` or `npm install`
 
-## Créer un .env avec les identifiants suivant : 
-DATABASE_USER=testuser
-DATABASE_PASSWORD=testuser
-DATABASE_HOST=cluster0.cocbwey.mongodb.net
 
 ## Running
 
