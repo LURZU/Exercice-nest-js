@@ -1,7 +1,8 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty } from "@nestjs/swagger";
 
-export class Cat {
-  /**
+export class CrudTest {
+
+    /**
    * The name of the Cat
    * @example Kitty
    */
@@ -11,7 +12,7 @@ export class Cat {
   age: number;
 
   @ApiProperty({
-    example: 'Maine Coon',
+    example: 'Resto du coeur',
     description: 'The breed of the Cat',
   })
   breed: string;
