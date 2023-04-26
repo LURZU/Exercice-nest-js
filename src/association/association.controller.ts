@@ -9,7 +9,6 @@ import { AssociationService } from './association.service';
 import { CreateAssociationDto } from './dto/create-association.dto';
 import { Association } from './entities/association.entity';
 import { AuthGuard } from 'src/auth/auth.guard';
-import { UpdateCrudTestDto } from 'src/crud-test/dto/update-crud-test.dto';
 import { UpdateAssociationDto } from './dto/update-association.dto';
 
 
