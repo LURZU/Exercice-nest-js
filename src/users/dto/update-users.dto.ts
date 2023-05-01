@@ -10,6 +10,12 @@ export class UpdateUsersDto extends PartialType(CreateUsersDto) {
   
     @IsString()
     readonly password: string;
+
+    @IsString()
+    readonly type: string;
+
+    @IsString()
+    readonly verificationToken?: string;
 }
 
 

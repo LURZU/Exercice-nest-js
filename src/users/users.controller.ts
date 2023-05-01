@@ -8,7 +8,7 @@ import {
 import { UsersService } from './users.service';
 import { CreateUsersDto } from './dto/create-users.dto';
 import { Users } from './entities/users.entity';
-import { AuthGuard } from 'src/auth/auth.guard';
+
 import { UpdateUsersDto } from './dto/update-users.dto';
 
 

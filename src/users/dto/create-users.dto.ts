@@ -1,6 +1,6 @@
-import { ApiProperty } from '@nestjs/swagger';
+
 import { IsString } from 'class-validator';
-import { Document, Schema } from 'mongoose';
+import { Document } from 'mongoose';
 
 export class CreateUsersDto extends Document {
 
@@ -9,15 +9,22 @@ export class CreateUsersDto extends Document {
 
   @IsString()
   password: string;
+
+  @IsString()
+  type: string;
+
+  @IsString()
+  verificationToken?: string;
+
+  @IsString()
+  readonly isEmailVerified: boolean;
   
 }
 
 export interface Users extends Document {
   readonly username: string;
-  readonly password: number;
-
-}
-function Prop(arg0: { type: any; auto: boolean; }): (target: CreateUsersDto, propertyKey: "_id") => void {
-  throw new Error('Function not implemented.');
+  readonly password: string;
+  readonly type: string;
+  readonly verificationToken?: string;
 }
 

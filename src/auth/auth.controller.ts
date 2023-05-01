@@ -6,11 +6,8 @@ import {
   HttpStatus,
   Param,
   Post,
-  Request,
-  UseGuards
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import * as bcrypt from 'bcrypt';
 
 
 @Controller('auth')
