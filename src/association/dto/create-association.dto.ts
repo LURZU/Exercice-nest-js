@@ -1,28 +1,39 @@
-import { ApiProperty } from '@nestjs/swagger';
-import { IsArray, IsInt, IsString } from 'class-validator';
+
+import {  IsInt, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 
 export class CreateAssociationDto {
     @IsString()
-    readonly name: string;
+    readonly rna_number: string;
   
     @IsInt()
-    readonly age: number;
+    readonly name: number;
   
     @IsString()
-    readonly breed: string;
+    readonly adress: string;
+
+    @IsString()
+    readonly phone: string;
+
+    @IsString()
+    readonly type: string;
+
+    @IsString()
+    readonly lat: string;
 
     @IsString()
     readonly lon: string;
 
-    @IsString()
-    readonly lat: string;
+
+
 }
 
 export interface Association extends Document {
+  readonly ma_number: string;
   readonly name: string;
-  readonly age: number;
-  readonly breed: string;
+  readonly adress: number;
+  readonly phone: string;
+  readonly type: string;
   readonly lat: string;
   readonly lon: string;
 

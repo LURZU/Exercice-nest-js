@@ -4,19 +4,25 @@ import { IsInt, IsString } from 'class-validator';
 
 export class UpdateAssociationDto extends PartialType(CreateAssociationDto) {
     @IsString()
-    readonly name: string;
+    readonly rna_number: string;
   
     @IsInt()
-    readonly age: number;
+    readonly name: number;
   
     @IsString()
-    readonly breed: string;
+    readonly adress: string;
 
     @IsString()
-    readonly lon: string;
+    readonly phone: string;
+
+    @IsString()
+    readonly type: string;
 
     @IsString()
     readonly lat: string;
+
+    @IsString()
+    readonly lon: string;
 }
 
 

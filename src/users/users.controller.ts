@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import {
   ApiBearerAuth,
   ApiOperation,
@@ -10,7 +10,6 @@ import { CreateUsersDto } from './dto/create-users.dto';
 import { Users } from './entities/users.entity';
 
 import { UpdateUsersDto } from './dto/update-users.dto';
-
 
 @ApiBearerAuth()
 @ApiTags('users')
@@ -54,3 +53,4 @@ export class UsersController {
     return this.usersService.remove(id);
   }
 }
+

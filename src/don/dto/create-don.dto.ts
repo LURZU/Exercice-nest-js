@@ -14,7 +14,7 @@ export class CreateDonDto extends Document {
   id_user : string;
 
     @IsString()
-    username: string;
+    email: string;
 }
 
 export interface Don extends Document {

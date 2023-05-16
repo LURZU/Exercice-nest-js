@@ -9,6 +9,9 @@ export class Users {
    * @example Kitty
    */
   @ApiProperty({ example: 1, description: 'Nom utilisateur' })
+  email: string;
+
+  @ApiProperty({ example: 1, description: 'Nom utilisateur' })
   username: string;
 
   @ApiProperty({ example: 1, description: 'Mot de passe' })
@@ -16,5 +19,15 @@ export class Users {
 
   @ApiProperty({ example: 1, description: 'Qui êtes vous ?' })
   type: string;
+
+  @ApiProperty({ example: 1, description: 'Votre mail est-il vérifié ?' })
+  isEmailVerified: boolean;
+
+  @ApiProperty({ example: 1, description: 'Qui êtes vous ?' })
+  verificationToken?: string;
+
+  @ApiProperty({ example: 1, description: 'Première connexion' })
+  first_connexion: boolean;
+
 
 }

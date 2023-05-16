@@ -1,21 +1,42 @@
 import { PartialType } from '@nestjs/swagger';
-import { IsString } from 'class-validator';
+import { IsBoolean, IsString } from 'class-validator';
 import { CreateUsersDto } from './create-users.dto';
 
 export class UpdateUsersDto extends PartialType(CreateUsersDto) {
 
 
     @IsString()
-    readonly username: string;
+    readonly email: string;
   
     @IsString()
     readonly password: string;
 
     @IsString()
-    readonly type: string;
-
+    type: string;
+  
     @IsString()
-    readonly verificationToken?: string;
+    verificationToken?: string;
+  
+    @IsString()
+    isEmailVerified: boolean;
+  
+    @IsString()
+    phone: string;
+  
+    @IsString()
+    adress: string;
+  
+    @IsString()
+    first_name: string;
+  
+    @IsString()
+    roles: string;
+  
+    @IsBoolean()
+    bool_newsletter: boolean;
+  
+    @IsBoolean()
+    first_connexion: boolean;
 }
 
 

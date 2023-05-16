@@ -1,11 +1,14 @@
 
-import { IsString } from 'class-validator';
+import { IsBoolean, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 
 export class CreateUsersDto extends Document {
 
   @IsString()
-  readonly username: string;
+  email: string;
+
+  @IsString()
+  username: string;
 
   @IsString()
   password: string;
@@ -17,12 +20,30 @@ export class CreateUsersDto extends Document {
   verificationToken?: string;
 
   @IsString()
-  readonly isEmailVerified: boolean;
+  isEmailVerified: boolean;
+
+  @IsString()
+  phone: string;
+
+  @IsString()
+  adress: string;
+
+  @IsString()
+  first_name: string;
+
+  @IsString()
+  roles: string;
+
+  @IsBoolean()
+  bool_newsletter: boolean;
+
+  @IsBoolean()
+  first_connexion: boolean;
   
 }
 
 export interface Users extends Document {
-  readonly username: string;
+  readonly email: string;
   readonly password: string;
   readonly type: string;
   readonly verificationToken?: string;

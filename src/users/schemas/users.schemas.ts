@@ -1,18 +1,21 @@
 import * as mongoose from 'mongoose';
 
 export const UsersSchema = new mongoose.Schema({
-  username: {type: String, unique: true, required: true},
+  email: {type: String, unique: true, required: true},
+  username: {type: String, unique: true},
   password: String,
   type: String,
   isEmailVerified: Boolean,
   verificationToken: String,
+  first_connexion: Boolean,
 });
 
 
 
 export interface UserDocument extends Document {
-  username: string;
+  email: string;
   password: string;
   isEmailVerified: boolean;
   verificationToken: string | null;
+  first_connexion: boolean;
 }

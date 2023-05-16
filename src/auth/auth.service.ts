@@ -16,14 +16,17 @@ export class AuthService {
     return bcrypt.hash(password, 10);
   }
 
-  async signIn(username: string, pass: string) {
-    const user = await this.usersService.findByUsername(username);
+  async signIn(email: string, pass: string) {
+    const user = await this.usersService.findByemail(email);
     if (!await bcrypt.compare(pass ,user?.password)) {
       throw new UnauthorizedException();
     }
-    const payload = { username: user.username, sub: user.userId };
+    const payload = { email: user.email, sub: user.userId };
     return {
       access_token: await this.jwtService.signAsync(payload),
+      isEmailVerified: user.isEmailVerified,
+      first_connexion: user.first_connexion,
+      type : user.type,
     };
   }
 }

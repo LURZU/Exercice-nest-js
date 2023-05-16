@@ -14,5 +14,5 @@ export class UpdateDonDto extends PartialType(CreateDonDto) {
     id_user : string;
   
       @IsString()
-      username: string;
+      email: string;
 }
