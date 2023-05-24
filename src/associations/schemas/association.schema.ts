@@ -1,11 +1,12 @@
 import * as mongoose from 'mongoose';
 
 export const AssociationSchema = new mongoose.Schema({
-  rna_number: String,
+  rna: String,
   name: String,
-  adress: String,
-  phone: String,
+  adresse: String,
+  town: String,
+  postcode: Number,
+  coordinate: String,
+  phone: Number,
   type: String,
-    lat: String,
-    lon: String,
 });
