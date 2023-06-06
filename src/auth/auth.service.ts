@@ -26,7 +26,8 @@ export class AuthService {
       access_token: await this.jwtService.signAsync(payload),
       isEmailVerified: user.isEmailVerified,
       first_connexion: user.first_connexion,
-      type : user.type,
+      type: user.type,
+      _id: user._id, // Ajouter l'ID de l'utilisateur dans la réponse
     };
   }
 }

@@ -29,4 +29,8 @@ export class UpdateAssociationDto {
   @IsOptional()
   @IsString()
   readonly type?: string;
+
+  @IsOptional()
+  @IsNumber()
+  readonly user_id?: string;
 }

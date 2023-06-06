@@ -28,4 +28,7 @@ export class Association {
 
   @ApiProperty({example: 'Humanitaire', description: 'The type of the association'})
   type: string;
+
+  @ApiProperty({example: 'Id user de l\'association', description: 'User id of the association'})
+  user_id: string;
 }

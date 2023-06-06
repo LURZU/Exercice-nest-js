@@ -1,5 +1,5 @@
 
-import { IsBoolean, IsString } from 'class-validator';
+import { IsBoolean, IsOptional, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 
 export class CreateUsersDto extends Document {
@@ -30,6 +30,9 @@ export class CreateUsersDto extends Document {
 
   @IsString()
   first_name: string;
+
+  @IsString()
+  last_name: string;
 
   @IsString()
   roles: string;

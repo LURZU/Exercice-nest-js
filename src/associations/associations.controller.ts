@@ -42,6 +42,7 @@ export class AssociationsController {
     return this.associationsService.update(id, updateAssociationDto);
   }
 
+
   @Get()
   findAll(): Promise<Association[]> {
     return this.associationsService.findAll();

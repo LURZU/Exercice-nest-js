@@ -9,6 +9,7 @@ export interface Association extends Document {
   readonly coordinate: string;
   readonly phone: number;
   readonly type: string;
+  readonly user_id: string;
 }
 
 //Cette interface Association décrit la structure des documents qui seront stockés dans la collection MongoDB associée à ce modèle.

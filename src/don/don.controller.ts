@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { DonService } from './don.service';
 import { CreateDonDto } from './dto/create-don.dto';
 import { UpdateDonDto } from './dto/update-don.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('don')
 @Controller('don')
 export class DonController {
   constructor(private readonly donService: DonService) {}

@@ -38,4 +38,5 @@ export class AssociationsService {
 	async findOne(id: number): Promise<Association> {
 		return this.associationModel.findById(id).exec();
 	}
+
 }

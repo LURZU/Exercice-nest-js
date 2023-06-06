@@ -9,4 +9,5 @@ export const AssociationSchema = new mongoose.Schema({
   coordinate: String,
   phone: Number,
   type: String,
+  user_id: String,
 });

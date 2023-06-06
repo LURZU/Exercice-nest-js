@@ -27,12 +27,14 @@ export class UsersController {
     return this.usersService.create(createUsersDto);
   }
 
+
   @Get()
   findAll(): Promise<Users[]> {
     return this.usersService.findAll();
   }
 
   @Get(':id')
+  @ApiOperation({ summary: 'Trouver un utilisateur' })
   @ApiResponse({
     status: 200,
     description: 'The found record',

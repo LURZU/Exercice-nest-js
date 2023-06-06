@@ -8,6 +8,12 @@ export class CreateAssociationDto {
   name: string;
 
   @IsString()
+  profil_picture: string;
+
+  @IsString()
+  description: string;
+
+  @IsString()
   adresse: string;
 
   @IsString()
@@ -24,4 +30,7 @@ export class CreateAssociationDto {
 
   @IsString()
   type: string;
+
+  @IsString()
+  user_id: string;
 }
