@@ -1,11 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { DonService } from './don.service';
 import { CreateDonDto } from './dto/create-don.dto';
 import { UpdateDonDto } from './dto/update-don.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { AuthGuard } from 'src/auth/auth.guard';
 
 @ApiTags('don')
 @Controller('don')
+@UseGuards(AuthGuard)
 export class DonController {
   constructor(private readonly donService: DonService) {}
 

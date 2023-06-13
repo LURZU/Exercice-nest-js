@@ -31,6 +31,11 @@ export class AssociationsService {
 		return updatedAssociation;
 	}
 
+	async findByUserId(userId: string): Promise<Association[]> {
+		return this.associationModel.find({ user_id: userId }).exec();
+	  }
+	  
+
 	async findAll(): Promise<Association[]> {
 		return this.associationModel.find().exec();
 	}

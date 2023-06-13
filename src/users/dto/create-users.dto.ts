@@ -23,6 +23,9 @@ export class CreateUsersDto extends Document {
   isEmailVerified: boolean;
 
   @IsString()
+  profile_picture?: string;
+
+  @IsString()
   phone: string;
 
   @IsString()

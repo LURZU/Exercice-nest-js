@@ -19,6 +19,9 @@ export class UpdateUsersDto extends PartialType(CreateUsersDto) {
   @IsString()
   address?: string;
 
+  @IsString()
+  profile_picture: string;
+
   @IsOptional()
   @IsNumberString()
   category_id?: number;

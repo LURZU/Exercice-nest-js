@@ -28,6 +28,7 @@ export class AuthService {
       first_connexion: user.first_connexion,
       type: user.type,
       _id: user._id, // Ajouter l'ID de l'utilisateur dans la réponse
+      profile_picture: user.profile_picture,
     };
   }
 }
