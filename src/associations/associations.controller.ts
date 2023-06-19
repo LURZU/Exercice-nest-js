@@ -71,8 +71,7 @@ export class AssociationsController {
     description: 'The found record',
     type: AssociationEntity,
   })
-
   findOne(@Param('id') id: string): Promise<Association> {
-    return this.associationsService.findOne(+id);
+    return this.associationsService.findOne(id);
   }
 }

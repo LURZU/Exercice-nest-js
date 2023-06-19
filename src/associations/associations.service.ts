@@ -55,7 +55,7 @@ export class AssociationsService {
 		return this.associationModel.find().exec();
 	}
 
-	async findOne(id: number): Promise<Association> {
+	async findOne(id: string): Promise<Association> {
 		return this.associationModel.findById(id).exec();
 	}
 
