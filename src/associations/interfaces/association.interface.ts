@@ -7,7 +7,7 @@ export interface Association extends Document {
   readonly town: string;
   readonly postcode: number;
   readonly coordinate: string;
-  readonly phone: number;
+  readonly phone: string;
   readonly type: string;
   readonly user_id: string;
 }

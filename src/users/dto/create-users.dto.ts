@@ -1,4 +1,3 @@
-
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 

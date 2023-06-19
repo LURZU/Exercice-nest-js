@@ -42,14 +42,22 @@ export class AssociationsController {
     return this.associationsService.update(id, updateAssociationDto);
   }
 
+
   @Get('user/:userId')
   @ApiOperation({ summary: 'Trouver une association basée sur un user_id' })
   @ApiResponse({ status: 200, description: "L'association a bien été trouvé !" })
   @ApiResponse({ status: 404, description: "Aucune association n'a été trouvé pour cet utilisateur" })
   findOneByUserId(@Param('userId') userId: string): Promise<Association[]> {
-   
     return this.associationsService.findByUserId(userId);
   }
+  
+
+  @Post('type')
+    @ApiOperation({ summary: 'Find by category' })
+    @ApiResponse({ status: 403, description: 'Forbidden.' })
+    async findAllByCategory(@Body() category) {
+        return this.associationsService.findAllByCategory(category);
+    };
 
 
   @Get()

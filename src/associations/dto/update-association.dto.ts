@@ -8,10 +8,18 @@ export class UpdateAssociationDto {
 
   @IsOptional()
   @IsString()
+  readonly description?: string;
+
+  @IsOptional()
+  @IsString()
   readonly adresse?: string;
 
   @IsOptional()
-  @IsNumber()
+  @IsString()
+  readonly profil_picture?: string;
+
+  @IsOptional()
+  @IsString()
   readonly town?: number;
 
   @IsOptional()
@@ -24,7 +32,7 @@ export class UpdateAssociationDto {
 
   @IsOptional()
   @IsNumber()
-  readonly phone?: number;
+  readonly phone?: string;
 
   @IsOptional()
   @IsString()

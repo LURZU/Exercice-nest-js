@@ -26,7 +26,7 @@ export class CreateAssociationDto {
   coordinate: string;
 
   @IsInt()
-  phone: number;
+  phone: string;
 
   @IsString()
   type: string;

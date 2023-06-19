@@ -24,7 +24,7 @@ export class Association {
   coordinate: string;
 
   @ApiProperty({ example: '0468445484', description: 'The phone number of the association' })
-  phone: number;
+  phone: string;
 
   @ApiProperty({example: 'Humanitaire', description: 'The type of the association'})
   type: string;

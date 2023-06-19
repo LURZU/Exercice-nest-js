@@ -7,7 +7,7 @@ export const AssociationSchema = new mongoose.Schema({
   town: String,
   postcode: Number,
   coordinate: String,
-  phone: Number,
+  phone: String,
   type: String,
   user_id: String,
 });

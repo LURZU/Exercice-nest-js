@@ -31,6 +31,21 @@ export class AssociationsService {
 		return updatedAssociation;
 	}
 
+	async updateUserAssociation(id: string, updateAssociationDto: UpdateAssociationDto): Promise<Association> {
+		const updatedAssociation = await this.associationModel.findByIdAndUpdate(id, updateAssociationDto, { new: true });
+		if (!updatedAssociation) {
+			throw new NotFoundException(`Association with ID ${id} not found`);
+		}
+		return updatedAssociation;
+	}
+
+	async findAllByCategory(category){
+        if(category.category == "all"){
+            return this.associationModel.find().exec();
+        }
+        return this.associationModel.find(category).exec();
+    }
+
 	async findByUserId(userId: string): Promise<Association[]> {
 		return this.associationModel.find({ user_id: userId }).exec();
 	  }
