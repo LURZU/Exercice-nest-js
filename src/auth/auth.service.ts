@@ -21,14 +21,17 @@ export class AuthService {
     if (!await bcrypt.compare(pass ,user?.password)) {
       throw new UnauthorizedException();
     }
-    const payload = { email: user.email, sub: user.userId };
-    return {
-      access_token: await this.jwtService.signAsync(payload),
+    const payload = { 
+      email: user.email, 
+      sub: user.userId,
       isEmailVerified: user.isEmailVerified,
       first_connexion: user.first_connexion,
       type: user.type,
-      _id: user._id, // Ajouter l'ID de l'utilisateur dans la réponse
-      profile_picture: user.profile_picture,
+      _id: user._id, 
+      profile_picture: user.profile_picture 
+    };
+    return {
+      access_token: await this.jwtService.signAsync(payload),
     };
   }
 }

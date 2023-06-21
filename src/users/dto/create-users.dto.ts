@@ -36,9 +36,6 @@ export class CreateUsersDto extends Document {
   @IsString()
   last_name: string;
 
-  @IsString()
-  roles: string;
-
   @IsBoolean()
   bool_newsletter: boolean;
 
