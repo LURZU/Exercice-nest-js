@@ -14,7 +14,7 @@ import { DonTempsModule } from './don_temps/don_temps.module';
 import configuration from './config/configuration';
 
 @Module({
-  imports: [ AssociationsModule, AuthModule, UsersModule, ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env',   load: [configuration] }), DonModule, CategoryModule, DonFinancierModule, DonTempsModule],
+  imports: [ AssociationsModule, AuthModule, UsersModule, ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env',   load: [configuration] }), DonModule, CategoryModule, DonFinancierModule, DonTempsModule, DonMaterielModule],
 })
 
 

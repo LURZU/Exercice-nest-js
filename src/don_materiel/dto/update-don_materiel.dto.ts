@@ -9,6 +9,12 @@ export class UpdateDonMaterielDto extends PartialType(CreateDonMaterielDto) {
   
     @IsString()
     user_id: string;
+
+    @IsString()
+    created_by: string;
+  
+    @IsString()
+    association_id: string;
   
     @IsArray()
     @IsString({ each: true })

@@ -9,7 +9,13 @@ export class CreateDonMaterielDto {
   object_name: string;
 
   @IsString()
+  created_by: string;
+
+  @IsString()
   user_id: string;
+
+  @IsString()
+  association_id: string;
 
   @IsArray()
   @IsString({ each: true })

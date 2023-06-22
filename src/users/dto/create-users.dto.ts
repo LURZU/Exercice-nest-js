@@ -1,7 +1,7 @@
 import { IsBoolean, IsOptional, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 
-export class CreateUsersDto extends Document {
+export class CreateUsersDto {
 
   @IsString()
   email: string;

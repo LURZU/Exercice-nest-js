@@ -12,7 +12,15 @@ export class DonMateriel {
 
   @IsString()
   @Prop({ required: true })
+  created_by: string;
+
+  @IsString()
+  @Prop({ required: true })
   user_id: string;
+
+  @IsString()
+  @Prop({ required: true })
+  association_id: string;
 
   @IsArray()
   @IsString({ each: true })
