@@ -13,7 +13,7 @@ export class AuthService {
   }
 
   hash(password: string): string {
-    return bcrypt.hash(password, 10);
+    return bcrypt.hash(password, 10); 
   }
 
   async signIn(email: string, pass: string) {

@@ -39,11 +39,11 @@ export class AssociationsService {
 		return updatedAssociation;
 	}
 
-	async findAllByCategory(category){
-        if(category.category == "all"){
+	async findAllByCategory(type){
+        if(type.category == "all"){
             return this.associationModel.find().exec();
         }
-        return this.associationModel.find(category).exec();
+        return this.associationModel.find(type).exec();
     }
 
 	async findByUserId(userId: string): Promise<Association[]> {

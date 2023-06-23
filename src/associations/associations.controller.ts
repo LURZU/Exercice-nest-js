@@ -55,8 +55,8 @@ export class AssociationsController {
   @Post('type')
     @ApiOperation({ summary: 'Find by category' })
     @ApiResponse({ status: 403, description: 'Forbidden.' })
-    async findAllByCategory(@Body() category) {
-        return this.associationsService.findAllByCategory(category);
+    async findAllByCategory(@Body() type) {
+        return this.associationsService.findAllByCategory(type);
     };
 
 

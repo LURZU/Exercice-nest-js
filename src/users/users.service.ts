@@ -33,7 +33,7 @@ export class UsersService {
   }
 
   async sendVerificationEmail(user: Users, verificationCode: string) {
-    const url = `http://localhost:3000/verify/${verificationCode}`;
+    const url = `http://18.193.138.91:3000/verify/${verificationCode}`;
     const message = {
       name: 'Xepi',
       from: 'alt-int@studiodefacto.com',
