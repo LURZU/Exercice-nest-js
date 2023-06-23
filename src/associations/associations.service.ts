@@ -40,7 +40,7 @@ export class AssociationsService {
 	}
 
 	async findAllByCategory(type){
-        if(type.category == "all"){
+        if(type.type == "all"){
             return this.associationModel.find().exec();
         }
         return this.associationModel.find(type).exec();
